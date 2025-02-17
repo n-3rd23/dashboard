@@ -1,14 +1,12 @@
 "use client";
 
 import * as React from "react";
-import { TrendingUp } from "lucide-react";
 import { Label, Pie, PieChart } from "recharts";
 
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -60,10 +58,8 @@ export default function DashboardPieChart() {
   return (
     <Card className="flex flex-col">
       <CardHeader className="pb-0">
-        <CardTitle className="text-sm">Pie Chart - Donut with Text</CardTitle>
-        <CardDescription className="text-sm">
-          January - June 2024
-        </CardDescription>
+        <CardTitle className="text-sm">Pie Chart</CardTitle>
+        <CardDescription className="text-sm">Sample pie chart</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer

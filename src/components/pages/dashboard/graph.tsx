@@ -17,6 +17,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import AreaChartComponent from "@/components/molecules/chart/area-chart";
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },
   { month: "February", desktop: 305, mobile: 200 },
@@ -41,51 +42,39 @@ export default function DashboardGraph() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-sm">Area Chart - Stacked</CardTitle>
-        <CardDescription className="text-sm">
-          Showing total visitors for the last 6 months
-        </CardDescription>
+        <CardTitle className="text-sm">Area Chart</CardTitle>
+        <CardDescription className="text-sm">Sample area chart</CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig}>
-          <AreaChart
-            accessibilityLayer
-            data={chartData}
-            margin={{
-              left: 12,
-              right: 12,
-            }}
-          >
-            <CartesianGrid vertical={false} />
-            <XAxis
-              dataKey="month"
-              tickLine={false}
-              axisLine={false}
-              tickMargin={8}
-              tickFormatter={(value) => value.slice(0, 3)}
-            />
-            <ChartTooltip
-              cursor={false}
-              content={<ChartTooltipContent indicator="dot" />}
-            />
-            <Area
-              dataKey="mobile"
-              type="natural"
-              fill="var(--color-mobile)"
-              fillOpacity={0.4}
-              stroke="var(--color-mobile)"
-              stackId="a"
-            />
-            <Area
-              dataKey="desktop"
-              type="natural"
-              fill="var(--color-desktop)"
-              fillOpacity={0.4}
-              stroke="var(--color-desktop)"
-              stackId="a"
-            />
-          </AreaChart>
-        </ChartContainer>
+        <AreaChartComponent
+          config={chartConfig}
+          data={chartData}
+          areas={[
+            {
+              dataKey: "desktop",
+              type: "natural",
+              fill: "var(--color-desktop)",
+              fillOpacity: 0.4,
+              stroke: "var(--color-desktop)",
+              stackId: "a",
+            },
+            {
+              dataKey: "mobile",
+              type: "natural",
+              fill: "var(--color-mobile)",
+              fillOpacity: 0.4,
+              stroke: "var(--color-mobile)",
+              stackId: "a",
+            },
+          ]}
+          xAxisProps={{
+            dataKey: "month",
+            tickLine: false,
+            axisLine: false,
+            tickMargin: 8,
+            tickFormatter: (value) => value.slice(0, 3),
+          }}
+        />
       </CardContent>
     </Card>
   );
