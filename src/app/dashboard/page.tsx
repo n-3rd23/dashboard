@@ -82,8 +82,8 @@ export default function DashboardPage() {
           title="Bar Chart"
           description="Sample bar chart data."
         />
-        <DashboardPieChart />
         <DashboardGraph />
+        <DashboardPieChart />
       </div>
     </div>
   );

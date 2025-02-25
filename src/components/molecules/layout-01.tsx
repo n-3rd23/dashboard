@@ -1,11 +1,10 @@
 "use client";
 
+import { useTheme } from "next-themes";
 import type { ReactNode } from "react";
+import { useEffect, useState } from "react";
 import Sidebar from "./sidebar-01/sidebar-01";
 import TopNav from "./sidebar-01/top-nav-01";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
-import { SidebarProvider } from "../ui/sidebar";
 
 interface LayoutProps {
   children: ReactNode;

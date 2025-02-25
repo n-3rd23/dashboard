@@ -7,9 +7,9 @@ import {
   CreditCard,
   LogOut,
   Paintbrush,
-  Sparkles,
 } from "lucide-react";
 
+import { ThemeToggle } from "@/components/theme-toggle";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   DropdownMenu,
@@ -26,8 +26,6 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar";
-import { Switch } from "@/components/ui/switch";
-import { ThemeToggle } from "@/components/theme-toggle";
 
 export function NavUser({
   user,

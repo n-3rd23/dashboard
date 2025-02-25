@@ -1,38 +1,10 @@
 "use client";
 
-import {
-  BarChart2,
-  Receipt,
-  Building2,
-  CreditCard,
-  Folder,
-  Wallet,
-  Users2,
-  Shield,
-  MessagesSquare,
-  Video,
-  Settings,
-  HelpCircle,
-  Menu,
-  ChevronRight,
-} from "lucide-react";
+import { HelpCircle, Menu, Settings } from "lucide-react";
 
 import { Home } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import Image from "next/image";
-import {
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarMenuSub,
-  SidebarMenuSubButton,
-  SidebarMenuSubItem,
-} from "@/components/ui/sidebar";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
 
 export default function Sidebar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

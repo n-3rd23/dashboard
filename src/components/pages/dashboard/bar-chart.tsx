@@ -1,7 +1,6 @@
 "use client";
 
-import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
-
+import BarChartComponent from "@/components/molecules/chart/bar-chart";
 import {
   Card,
   CardContent,
@@ -9,13 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  ChartConfig,
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/components/ui/chart";
-import BarChartComponent from "@/components/molecules/chart/bar-chart";
+import { ChartConfig } from "@/components/ui/chart";
 
 const chartConfig = {
   desktop: {

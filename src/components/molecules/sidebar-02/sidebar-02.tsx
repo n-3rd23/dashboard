@@ -8,7 +8,6 @@ import {
   Home,
   Map,
   PieChart,
-  SquareTerminal,
   Square,
 } from "lucide-react";
 import type * as React from "react";
@@ -20,10 +19,10 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar";
+import { useTheme } from "next-themes";
 import { NavMain } from "./nav-main";
 import { NavUser } from "./nav-user";
 import { TeamSwitcher } from "./team-switcher";
-import { useTheme } from "next-themes";
 
 // This is sample data.
 const data = {

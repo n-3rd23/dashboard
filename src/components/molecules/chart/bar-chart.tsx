@@ -9,6 +9,7 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 type TBarChartComponent = {
   data?: any[];
   config: ChartConfig;
@@ -49,7 +50,7 @@ export default function BarChartComponent({
         />
         {barProps && barProps.length
           ? barProps.map((item, index) => {
-              // @ts-ignore
+              // @ts-expect-error
               return <Bar key={index} {...item} />;
             })
           : null}

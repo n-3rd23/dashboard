@@ -7,6 +7,7 @@ import {
 
 import { Area, CartesianGrid, XAxis, AreaChart, YAxis } from "recharts";
 
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 type TAreaChartComponent = {
   config: ChartConfig;
   data?: any[];
@@ -49,7 +50,7 @@ export default function AreaChartComponent({
         <ChartTooltip {...chartTooltipProps} />
         {areas?.length
           ? areas.map((item, index) => {
-              // @ts-ignore
+              // @ts-expect-error
               return <Area key={index} {...item} />;
             })
           : null}
