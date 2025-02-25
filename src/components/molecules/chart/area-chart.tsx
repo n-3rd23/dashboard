@@ -50,7 +50,7 @@ export default function AreaChartComponent({
         <ChartTooltip {...chartTooltipProps} />
         {areas?.length
           ? areas.map((item, index) => {
-              // @ts-expect-error
+              // @ts-expect-error error ignore error
               return <Area key={index} {...item} />;
             })
           : null}

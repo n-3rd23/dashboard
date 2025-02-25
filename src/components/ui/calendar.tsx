@@ -53,10 +53,12 @@ function Calendar({
         day_hidden: "invisible",
         ...classNames,
       }}
-      // eslint-disable @typescript-eslint/no-unused-vars
+      // eslint-disable @typescript-eslint/no-unused-vars not need but required
       components={{
-        // @ts-expect-error
+        // @ts-expect-error error ignore error
+        // eslint-disable @typescript-eslint/no-unused-vars not need but required
         IconLeft: ({ ...props }) => <ChevronLeft className="h-4 w-4" />,
+        // eslint-disable @typescript-eslint/no-unused-vars not need but required
         IconRight: ({ ...props }) => <ChevronRight className="h-4 w-4" />,
       }}
       {...props}

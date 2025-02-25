@@ -50,7 +50,7 @@ export default function BarChartComponent({
         />
         {barProps && barProps.length
           ? barProps.map((item, index) => {
-              // @ts-expect-error
+              // @ts-expect-error error ignore error
               return <Bar key={index} {...item} />;
             })
           : null}
