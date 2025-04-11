@@ -78,12 +78,6 @@ export default function DashboardPage() {
         </Card>
       </div>
       <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-        <DashboardBarChart
-          title="Bar Chart"
-          description="Sample bar chart data."
-        />
-        <DashboardGraph />
-        <DashboardPieChart />
       </div>
     </div>
   );
