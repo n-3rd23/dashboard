@@ -72,7 +72,7 @@ export function NavMain({
                 <span>{item.title}</span>
               </SidebarMenuButton>
             </SidebarMenuItem>
-          )
+          ),
         )}
       </SidebarMenu>
     </SidebarGroup>
